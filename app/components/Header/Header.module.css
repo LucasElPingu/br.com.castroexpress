@@ -1,0 +1,233 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(
+    135deg,
+    var(--color-dark-blue) 0%,
+    var(--color-light-blue) 100%
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 31, 63, 0.15);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logoArea {
+  flex: 0 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--color-orange-accent), var(--color-cyan-accent));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: 0.875rem;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logoMain {
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.logoSub {
+  font-weight: 500;
+  color: var(--color-silver);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: var(--spacing-xs) 0;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-orange-accent);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--color-orange-accent);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* WhatsApp Button */
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: var(--color-orange-accent);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.whatsappBtn:hover {
+  background: #e67e00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+}
+
+/* Mobile Menu Button */
+.hamburgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  padding: 0;
+  margin-left: var(--spacing-md);
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-dark-blue) 0%,
+    var(--color-light-blue) 100%
+  );
+  flex-direction: column;
+  padding: var(--spacing-lg) var(--spacing-md);
+  gap: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavLink {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  padding: var(--spacing-sm);
+  transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-orange-accent);
+}
+
+.mobileWhatsappBtn {
+  display: block;
+  background: var(--color-orange-accent);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mobileWhatsappBtn:hover {
+  background: #e67e00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .hamburgerBtn {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+
+  .whatsappBtn {
+    display: none;
+  }
+
+  .logoText {
+    display: none;
+  }
+
+  .logoIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.75rem;
+  }
+}
