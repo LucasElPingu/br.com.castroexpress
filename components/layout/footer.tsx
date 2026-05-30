@@ -1,12 +1,6 @@
 import Link from "next/link"
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react"
+import Image from "next/image"
+import { Phone, Mail, MapPin } from "lucide-react"
 
 const quickLinks = [
   { label: "Início", href: "#inicio" },
@@ -32,45 +26,23 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white font-bold text-xl text-navy">
-                CA
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight">CASTRO</span>
-                <span className="text-xs tracking-widest text-white/70">
-                  AIR CARGO
-                </span>
+            <div className="flex items-center">
+              <div className="relative h-16 w-44 overflow-hidden">
+                <Image
+                  src="/images/logo.png"
+                  alt="Castro Air Cargo"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
             <p className="text-sm leading-relaxed text-white/80">
-              Soluções completas em transporte aéreo de cargas e logística
-              corporativa. Agilidade, segurança e cobertura nacional para sua
-              empresa.
+              Especializada em logística aérea e transporte expresso, oferecendo
+              soluções ágeis e seguras para transporte de cargas em Manaus e região.
             </p>
-            {/* Social Media */}
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-orange"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-orange"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-orange"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
+            <div className="text-xs text-white/60">
+              <p>Castro Comercial</p>
+              <p>CNPJ: 34.907.119/0001-64</p>
             </div>
           </div>
 
@@ -96,10 +68,7 @@ export function Footer() {
             <h3 className="mb-6 text-lg font-semibold">Nossos Serviços</h3>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li
-                  key={service}
-                  className="text-sm text-white/70"
-                >
+                <li key={service} className="text-sm text-white/70">
                   {service}
                 </li>
               ))}
@@ -112,19 +81,19 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-orange" />
-                <span className="text-sm text-white/70">
-                  Av. Paulista, 1000, São Paulo - SP
+                <address className="text-sm text-white/70 not-italic">
+                  Rua Inocêncio de Araújo, 277
                   <br />
-                  CEP: 01310-100
-                </span>
+                  Educandos - Manaus/AM
+                </address>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-orange" />
                 <a
-                  href="tel:+5511999999999"
+                  href="tel:+5592981452088"
                   className="text-sm text-white/70 transition-colors hover:text-white"
                 >
-                  (11) 99999-9999
+                  (92) 98145-2088
                 </a>
               </li>
               <li className="flex items-center gap-3">

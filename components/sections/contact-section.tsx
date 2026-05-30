@@ -2,8 +2,8 @@ import { Phone, Mail, MapPin, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ContactSection() {
-  // Endereço da Castro Air Cargo
-  const address = "Av. Paulista, 1000 - Bela Vista, São Paulo - SP"
+  // Endereço da Castro Air Cargo em Manaus
+  const address = "Rua Inocêncio de Araújo, 277 - Educandos, Manaus - AM"
   const encodedAddress = encodeURIComponent(address)
 
   return (
@@ -34,24 +34,27 @@ export function ContactSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Castro Air Cargo"
+              title="Localização Castro Air Cargo - Manaus"
             />
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between gap-6">
             {/* Info Cards */}
             <div className="space-y-6">
-              <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy/10">
                     <Phone className="h-6 w-6 text-navy" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Telefone</h4>
-                    <p className="mt-1 text-muted-foreground">
-                      (11) 99999-9999
-                    </p>
+                    <h3 className="font-semibold text-foreground">Telefone / WhatsApp</h3>
+                    <a
+                      href="tel:+5592981452088"
+                      className="mt-1 block text-muted-foreground transition-colors hover:text-orange"
+                    >
+                      (92) 98145-2088
+                    </a>
                     <p className="text-sm text-muted-foreground">
                       Segunda a Sexta, 8h às 18h
                     </p>
@@ -59,43 +62,42 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy/10">
                     <Mail className="h-6 w-6 text-navy" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">E-mail</h4>
-                    <p className="mt-1 text-muted-foreground">
+                    <h3 className="font-semibold text-foreground">E-mail</h3>
+                    <a
+                      href="mailto:contato@castroaircargo.com.br"
+                      className="mt-1 block text-muted-foreground transition-colors hover:text-orange"
+                    >
                       contato@castroaircargo.com.br
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      comercial@castroaircargo.com.br
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy/10">
                     <MapPin className="h-6 w-6 text-navy" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Endereço</h4>
-                    <p className="mt-1 text-muted-foreground">
-                      Av. Paulista, 1000 - Bela Vista
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      São Paulo - SP, CEP: 01310-100
-                    </p>
+                    <h3 className="font-semibold text-foreground">Endereço</h3>
+                    <address className="mt-1 text-muted-foreground not-italic">
+                      Rua Inocêncio de Araújo, 277
+                      <br />
+                      Educandos - Manaus/AM
+                    </address>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* WhatsApp CTA */}
-            <div className="mt-8 rounded-2xl bg-gradient-to-br from-navy to-navy-light p-8 text-white">
+            <div className="rounded-2xl bg-gradient-to-br from-navy to-navy-light p-8 text-white">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
                   <MessageSquare className="h-6 w-6" />
@@ -108,11 +110,11 @@ export function ContactSection() {
               </p>
               <Button
                 asChild
-                className="w-full bg-orange hover:bg-orange/90 text-white font-semibold"
+                className="w-full bg-orange hover:bg-orange/90 text-white font-semibold transition-transform hover:scale-[1.02]"
                 size="lg"
               >
                 <a
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/5592981452088"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"

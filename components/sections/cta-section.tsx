@@ -32,10 +32,10 @@ export function CTASection() {
               <Button
                 asChild
                 size="lg"
-                className="h-14 bg-navy px-8 text-base font-semibold text-white hover:bg-navy-light"
+                className="h-14 bg-navy px-8 text-base font-semibold text-white hover:bg-navy-light transition-transform hover:scale-105"
               >
                 <a
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/5592981452088"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -48,7 +48,7 @@ export function CTASection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="h-14 border-white/30 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/20 hover:text-white"
+                className="h-14 border-white/30 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/20 hover:text-white transition-colors"
               >
                 <a href="#contato">Fale Conosco</a>
               </Button>
